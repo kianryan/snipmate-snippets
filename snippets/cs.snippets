@@ -412,7 +412,59 @@ snippet <r
 	<returns>${1}</returns>{${2}
 snippet <s
 	<see cref="${1}"/>${2}
-snippet <rem
+snippet <r
 	<remarks>${1}</remarks>${2}
 snippet <c
 	<code>${1}</code>${2}
+
+# xunit tests
+snippet xfact
+	[Fact]
+	public void ${1}()
+	{
+		${2}
+	}
+# xunit attributes
+snippet xtrait
+	[Trait("${1}", "true")]
+# xunit assertions
+snippet xequal
+	Assert.Equal(${1}, ${2});
+snippet xequal!
+	Assert.NotEqual(${1}, ${2});
+snippet xsame
+	Assert.Same(${1}, ${2});
+snippet xsame!
+	Assert.NotSame(${1}, ${2});
+snippet xcontains
+	Assert.Contains(${1}, ${2});
+snippet xcontains!
+	Assert.DoesNotContain(${1}, ${2});
+snippet xthrow
+	Assert.Throws<${1}>(() => ${2});
+snippet xthrow!
+	Assert.DoesNotThrow(() => ${1});
+snippet xrange
+	Assert.InRange(${1}, ${2}, ${3});
+snippet xrange!
+	Assert.NotInRange(${1}, ${2}, ${3});
+snippet xfrom
+	Assert.IsAssignableFrom<${1}>(${2});
+snippet xtype
+	Assert.IsType<${1}>(${2});
+snippet xtype!
+	Assert.IsNotType<${1}>(${2});
+snippet xempty
+	Assert.Empty(${1});
+snippet xempty!
+	Assert.NotEmpty(${1});
+snippet xnull
+	Assert.Null(${1});
+snippet xnull!
+	Assert.NotNull(${1});
+snippet xtrue
+	Assert.True(${1});
+snippet xfalse
+	Assert.False(${1});
+snippet xtrue!
+	Assert.False(${1});
